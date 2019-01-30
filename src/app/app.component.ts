@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import {Component} from '@angular/core';
+import {FormGroup} from '@angular/forms';
+import {FormlyFieldConfig} from '@ngx-formly/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,6 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 
   form = new FormGroup({});
   model = {
@@ -44,7 +43,7 @@ export class AppComponent {
       type: 'input',
       templateOptions: {
         type: 'number',
-        label: 'Your age',
+        label: 'Your age (min.12 - max.99)',
         placeholder: 'age',
         min: 12,
         max: 99
@@ -55,7 +54,7 @@ export class AppComponent {
       type: 'input',
       templateOptions: {
         type: 'checkbox',
-        label: 'Do you want to receive our newsletter?'
+        label: 'receive newsletter?'
       }
     }
   ];

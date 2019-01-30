@@ -1,8 +1,17 @@
 <div class="container">
   <h1>Formly Demo</h1>
+  <!--Start of the form - this is (almost) always the same in your HTML-->
+  <!--The contents of the form are defined in your model. see-->
+  <!--app.component.ts-->
   <form [formGroup]="form" (ngSubmit)="submit(model)">
     <formly-form [form]="form" [fields]="fields" [model]="model">
-      <button type="submit" disabled=!form.valid class="btn btn-default">Submit</button>
+      <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
     </formly-form>
   </form>
+  <!--End form-->
+  <hr>
+  <p>
+    ngx-formly information: <a href="https://ngx-formly.github.io/ngx-formly/">https://ngx-formly.github.io/ngx-formly/</a>
+  </p>
 </div>
+
