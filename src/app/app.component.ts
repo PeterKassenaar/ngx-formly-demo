@@ -8,7 +8,7 @@ import {FormlyFieldConfig} from '@ngx-formly/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  msg: string;
   form = new FormGroup({});
   model = {
     email: '',
@@ -61,5 +61,9 @@ export class AppComponent {
 
   submit(model) {
     console.log(model);
+    this.msg = 'submitted';
+    setTimeout(() => {
+      this.msg = '';
+    }, 2500);
   }
 }

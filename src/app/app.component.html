@@ -8,6 +8,9 @@
       <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
     </formly-form>
   </form>
+  <div class="alert alert-info" *ngIf="msg">
+    {{msg}} - see console
+  </div>
   <!--End form-->
   <hr>
   <p>
