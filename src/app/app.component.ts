@@ -54,7 +54,7 @@ export class AppComponent {
     },
     {
       key: 'newsletter',
-      type: 'input',
+      type: 'checkbox',
       templateOptions: {
         type: 'checkbox',
         label: 'Receive newsletter?'
