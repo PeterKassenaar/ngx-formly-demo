@@ -10,12 +10,15 @@ import {FormlyFieldConfig} from '@ngx-formly/core';
 export class AppComponent {
   msg: string;
   form = new FormGroup({});
+  // 1. Create a model for your form
   model = {
     email: '',
     name: '',
     age: '',
     newsletter: false
   };
+
+  // 2. Define fields - these of course can come from a backend/database
   fields: FormlyFieldConfig[] = [
     {
       key: 'email',
@@ -54,13 +57,15 @@ export class AppComponent {
       type: 'input',
       templateOptions: {
         type: 'checkbox',
-        label: 'receive newsletter?'
+        label: 'Receive newsletter?'
       }
     }
   ];
 
+  // 3. Submit the form.
   submit(model) {
     console.log(model);
+    // 3a. Do POST to backend here.
     this.msg = 'submitted';
     setTimeout(() => {
       this.msg = '';
